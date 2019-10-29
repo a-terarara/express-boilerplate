@@ -1,5 +1,5 @@
 exports.get = (req, res) => {
   res.status(200).json({
-    title: "Node Express Mongoose Boilerplate"
+    title: "Node Express Boilerplate"
   });
 };
