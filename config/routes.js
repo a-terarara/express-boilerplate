@@ -10,6 +10,8 @@ module.exports = function(app) {
   app.use((err, req, res, next) => {
     const { status, name, message, stack } = err;
     console.error(stack);
+    if (!status) res.status(500).json({ name, message });
+
     res.status(status).json({ name, message });
   });
 };
